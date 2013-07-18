@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodingChallenge</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div style="overfow:hidden">
+  <div style="float:right">
+    Hello <%= @user.name %>, <%= link_to "Sign out", logout_users_path %>
+  </div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
